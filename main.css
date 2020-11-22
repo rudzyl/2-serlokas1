@@ -1,19 +1,21 @@
 body {
     display: grid;
     grid-template-columns: 1fr 300px 100px 400px 1fr;
+    grid-template-areas: 
+        ". paveiksliukas . tekstas .";
      background-color: #EAEBED;
 }
     img {
+    grid-area: paveiksliukas;
     display: inline-block;
     width: 100%;
-    grid-column: 2 / 3;
     }
 
     div {
+        grid-area: tekstas;
         display: inline-block;
         width: 100%;
         text-align: center;
-        grid-column: 4 / 5;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     }
         h1 {
@@ -56,8 +58,7 @@ body {
 @media (max-width: 900px) {
     body {
         grid-template-columns: 50px 1fr 50px;
+        grid-template-areas: 
+        ". tekstas ."
+        ". paveiksliukas .";
     }
-    div {
-        grid-column: 2 / 3;
-    }
-}
